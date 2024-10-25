@@ -1,0 +1,17 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "combatSystem",
+            "request": "launch",
+            "mainClass": "combatSystem",
+            "projectName": "RPG_662ed4a7"
+        },
+        {
+            "name": "Launch Chrome",
+            "request": "launch",
+            "type": "chrome",
+            "url": "http://localhost:80"
+        }
+    ]
+}
