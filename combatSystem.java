@@ -25,7 +25,7 @@ switch (gameLogic.PlayerinputHandler(player.weaponDamage)) {//Player Input
         break;
     case "heal":player.health = player.health + PC.HEAL();
     break;
-    case "block": player.health=player.health-(skeleton.ATTACK(skeleton.weaponDamage) - player.BLOCK());
+    case "block": player.health=player.health-(NPC.ATTACK(skeleton.weaponDamage) - PC.BLOCK());
     turnOrder ="npc";
     break;
     case "retreat": escape = PC.ESCAPE(skeleton.health, player.escapeChance);
