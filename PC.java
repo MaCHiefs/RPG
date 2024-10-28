@@ -19,9 +19,12 @@ return weaponDamage;
 
 }
 
-public static int BLOCK(int incomingDamage){
-return Math.floorDivExact(incomingDamage, 2);
-
+public static int BLOCK(){
+    Random rand = new Random();
+int blockedDamage = rand.nextInt(8)+3 ;
+System.out.println("You blocked "+ blockedDamage+ " damage!"+"\n");
+//block reduces damage taken through a random num(bound equals to a constant)+1 that subtracts the incoming damage and returns it
+return blockedDamage;
 
     
 }
@@ -30,7 +33,7 @@ return Math.floorDivExact(incomingDamage, 2);
 public static int HEAL(){
     System.out.println("You reached for a life potion in your bag");
     System.out.println("You drank and it healed you for 3 HP");
-    return 3;
+    return 5;
 }
 
 
@@ -38,6 +41,7 @@ public static boolean ESCAPE(int enemyHealth, int escapeChance){
     Random rand = new Random();
 int ifEscape =Math.abs((rand.nextInt(10)+1)+Math.floorDiv(escapeChance,enemyHealth));
 System.out.println(Math.floorDiv(enemyHealth,escapeChance));
+
 
 if(ifEscape==10){
     System.out.println("You escaped the encounter with your nuts still intact");
